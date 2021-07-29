@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Requests</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <style>
+            form > input {
+                display: block;
+            }
+            </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h2>GET</h2>
+            <section id="getAllSection">
+                <h3>GET ALL</h3>
+                <div id="getAllOutput">
+
+                </div>
+            </section>
+            <section id="getByIdSection">
+                <h3>GET BY ID</h3>
+                <label for="wainwrightId">ID:</label>
+                <input type="number" name="wainwrightId" id="wainwrightId" min="1">
+                <button onclick="getWainwrightById();">GET</button> 
+                <div id="getByIdOutput">
+
+                </div>
+            </section>
+        </section>
+            <section  id="postSection">
+                <h2>POST</h2>
+                <form>
+                    <label for="wainwrightRanking">Ranking:</label>
+                    <input type="number " id="wainwrightRanking" name="ranking" required min="1" max="214">
+                    <label for="wainwrightName">Name:</label>
+                    <input type="text" id="wainwrightName" name="name" required>
+                    <label for="wainwrightElevation">Elevation (m):</label>
+                    <input type="number" id="wainwrightElevation" name="elevation" required min="1" max="1000">
+                    <label for="wainwrightRegion">Region:</label>
+                    <input type="text" id="wainwrightRegion" name="region" required>
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <section id="updateWainwright">
+                <h2>Update</h2>
+                <form>
+                    <label for="wainwrightId">ID:</label>
+                    <input type="number " id="updateWainwrightId" name="id" required min="1" max="214" readonly>
+                    <label for="wainwrightRanking">Ranking:</label>
+                    <input type="number " id="updateWainwrightRanking" name="ranking" required min="1" max="214">
+                    <label for="wainwrightName">Name:</label>
+                    <input type="text" id="updateWainwrightName" name="name" required>
+                    <label for="wainwrightElevation">Elevation (m):</label>
+                    <input type="number" id="updateWainwrightElevation" name="elevation" required min="1" max="1000">
+                    <label for="wainwrightRegion">Region:</label>
+                    <input type="text" id="updateWainwrightRegion" name="region" required>
+                    <button type="reset">Reset</button>
+                    <button type="update">Update</button>
+                </form>
+            </section>
+        </main>
+        <script src="/Wainwright-Project/js-Project/project.js"></script>
+        <p style="text-align:center; background-color: black;"><img src="Scafell Pike.png" alt="Scafell Pike"></p>
+    </body>
+    
+    </html>
