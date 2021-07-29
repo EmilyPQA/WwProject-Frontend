@@ -14,6 +14,7 @@ const updateWainwrightName = document.querySelector("#updateWainwrightName")
 const updateWainwrightElevation = document.querySelector("#updateWainwrightElevation")
 const updateWainwrightRegion = document.querySelector("#updateWainwrightRegion")
 
+
 const getAllWainwrights = () => {
     axios.get(`${baseURL}/getAllWainwrights`)
         .then(res => {
